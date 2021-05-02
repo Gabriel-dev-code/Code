@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola</title>
+    <style>
+        body {
+            background-color: black;
+            color: yellow;
+            text-align: center;
+            font: normal 15pt Arial;
+        }
+        #div_relogio {
+            width: 400px;
+            background-color: rgb(7, 7, 7);
+            color: rgb(44, 255, 2);
+            font: italic 20pt Arial;
+            text-align: center;
+            border-radius: 20px;
+            margin: auto;
+        }
+        body {
+            color: yellow;
+            background-color : rgb(0, 0, 0);
+            border-radius: 25px;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 5px 5px 10px yellow;
+            
+        }    
+    </style>
+</head>
+<body>
+   <h1>Olá,tudo bem?</h1>
+    <div id="div_relogio">
+        Relogio Master
+    </div>
+    <pt>&copy GPROGRAMATION </pt>
+</body>
+<script>
+function Relogio() {
+    var data = new Date()
+    var hora = data.getHours()
+    var minuto = data.getMinutes()
+    var segundo = data.getSeconds()
+
+    var tempo = `${hora} : ${minuto} : ${segundo}`
+    var tempor = window.document.getElementById('div_relogio')
+    tempor.innerHTML = tempo
+}
+setInterval(Relogio, 500)
+</script>
+</body>
+</html>
